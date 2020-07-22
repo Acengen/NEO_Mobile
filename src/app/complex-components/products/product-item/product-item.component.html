@@ -1,0 +1,17 @@
+<div class="card" routerLinkActive="active">
+  <div class="card-header">
+    {{ productItem.name }}
+  </div>
+  <div class="card-body">
+    <img [src]="productItem.image" alt="productItem-image" />
+    <hr />
+    <p style="font-weight: bold;">{{ productItem.description }}</p>
+    <span>{{ productItem.pack }}</span>
+    <p style="margin-top: 5px;">Total cost - ${{ productItem.price }}</p>
+  </div>
+  <div class="card-bottom">
+    <a [routerLink]="['/products', index]" (click)="canActive()"
+      >More details</a
+    >
+  </div>
+</div>

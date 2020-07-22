@@ -1,0 +1,48 @@
+<div class="account-created-msg" *ngIf="accCreated">
+  <span>Successfully created account, now login</span>
+</div>
+<div style="display: flex; justify-content: center;">
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+</div>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <p class="login_signin_paragraph">Sign In or Create account</p>
+  <div class="alert alert-danger" role="alert" *ngIf="errorMsg; else null">
+    {{ errorMsg }}
+  </div>
+  <label>*Email:</label>
+  <input
+    class="form-control"
+    type="email"
+    name="email"
+    #email="ngModel"
+    ngModel
+    required
+    email
+  />
+  <p *ngIf="!email.valid && email.touched">
+    <span style="color: crimson;">*</span>Enter vaild email
+  </p>
+  <label
+    >*Code <br />
+    <i>(enter a code from bill your received)</i></label
+  >
+  <input
+    class="form-control"
+    type="password"
+    name="psw"
+    ngModel
+    required
+    #psw="ngModel"
+    minlength="6"
+  />
+  <p *ngIf="!psw.valid && psw.touched">
+    <span style="color: crimson;">*</span>Password must have 6 or more chars
+  </p>
+  <button type="submit" class="btn" [disabled]="!form.valid">
+    {{ !isLoggedIn ? "Create Account" : "Sign-in" }}
+  </button>
+  |
+  <button class="btn" type="button" (click)="createAcc()">
+    Already have account? <span style="border-bottom: blue;">sign-in</span>
+  </button>
+</form>

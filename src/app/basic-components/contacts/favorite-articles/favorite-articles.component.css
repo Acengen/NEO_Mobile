@@ -1,0 +1,32 @@
+.favorite-articles {
+    padding: 10px;
+}
+.favorite-articles button {
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+ul li {
+    border: none !important;
+}
+form button {
+    background-color: #539cd8;
+    color: #ffffff;
+}
+form {
+    max-width: 300px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid crimson;
+}
+
+form p {
+    font-size: 12px;
+    color: crimson;
+}

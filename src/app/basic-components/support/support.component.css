@@ -1,0 +1,13 @@
+.support {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.support p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #539cd8;
+}
+ul li:hover{
+    color: #539cd8;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<div class="products my-3">
+    <h1 class="text-center">Mobile phones</h1>
+    <span class="text-center" style="display: block;font-style: italic;">"PHONES ARE THE FUTURE"</span>
+    <div class="fetched-products my-3">
+        <div class="product-item" *ngFor="let product of products;let i = index" [index]='i' [productItem]="product">
+        </div>
+    </div>
+    <div *ngIf="isLoading; else null" style="display: flex;justify-content: center;">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

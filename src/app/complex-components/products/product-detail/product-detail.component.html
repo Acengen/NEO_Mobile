@@ -1,0 +1,44 @@
+<div class="overlay">
+  <div class="card my-3 py-3" style="border: none !important;">
+    <div style="display: flex; justify-content: center;">
+      <app-loading-spinner *ngIf="isLoading; else null"></app-loading-spinner>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          [src]="product.image"
+          class="card-img"
+          alt="product-img"
+          style="width: 100%; height: 100%;"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5>{{ product.name }}</h5>
+          <p class="card-title text-muted" style="font-size: 12px;">
+            characteristics
+          </p>
+
+          <p class="card-text">{{ product.display }}</p>
+          <p class="card-text">{{ product.platform }}</p>
+          <p class="card-text">{{ product.memorie }}</p>
+
+          <a href="https://www.vipmobile.rs/privatni/mobilni_uredjaji"
+            >More characteristics <i class="fa fa-arrow-circle-right"></i
+          ></a>
+        </div>
+        <a (click)="postMobile()" class="mobile-buy" *ngIf="authent">Buy </a>
+        <span class="login-span" *ngIf="!authent" routerLink="/auth-form"
+          >login</span
+        >
+      </div>
+    </div>
+    <div class="card-bottom text-right">
+      <a
+        routerLink="/products"
+        style="font-size: 24px; color: crimson; margin-right: 10px;"
+        ><i class="fas fa-minus-circle"></i
+      ></a>
+    </div>
+  </div>
+</div>

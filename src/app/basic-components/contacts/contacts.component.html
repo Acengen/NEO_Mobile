@@ -1,0 +1,61 @@
+<div class="contacts">
+  <p><i class="fa fa-home"></i> Customer service</p>
+  <ul class="list-group">
+    <li class="list-group-item active">Popular questions</li>
+    <app-adding-updating-questions></app-adding-updating-questions>
+    <li
+      (click)="addToFavoriteArticles(contact)"
+      class="list-group-item"
+      *ngFor="let contact of contacts; let i = index"
+    >
+      <i class="fa fa-book"></i> {{ contact.name }}
+
+      <div class="curcle" (click)="updateItem(i)">edit</div>
+    </li>
+  </ul>
+
+  <app-favorite-articles *ngIf="!added"></app-favorite-articles>
+  <app-contact-us *ngIf="added"></app-contact-us>
+
+  <div class="contact-support">
+    <div
+      class="card"
+      style="max-width: 200px;"
+      (click)="contactUs()"
+      [ngClass]="{ activeClass: added }"
+    >
+      <div class="card-body">
+        <h1 class="card-title">Contact us</h1>
+        <p class="card-text">
+          Do you still have a question? Send an email to Vip Customer Service
+          via the form.
+        </p>
+      </div>
+      <i class="fa fa-envelope-o"></i>
+    </div>
+    <div
+      class="card"
+      style="max-width: 200px;"
+      (click)="favorit()"
+      [ngClass]="{ activeClass: !added }"
+    >
+      <div class="card-body">
+        <h1 class="card-title">My favorite articles</h1>
+        <p class="card-text">
+          The articles you have marked as favorites can be found here.
+        </p>
+      </div>
+      <i class="fa fa-bookmark"></i>
+    </div>
+    <div class="card disabled" style="max-width: 200px; cursor: not-allowed;">
+      <div class="card-body">
+        <h1 class="card-title">Step-by-step support</h1>
+        <p class="card-text">
+          Something not working? Want to set up 4G? Or to choose the prepaid
+          option?
+        </p>
+      </div>
+      <i class="fa fa-clone"></i>
+    </div>
+  </div>
+</div>

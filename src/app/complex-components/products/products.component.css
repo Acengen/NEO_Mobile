@@ -1,0 +1,15 @@
+.products {
+  padding: 10px;
+  color: #696969;
+}
+.fetched-products {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .fetched-products {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

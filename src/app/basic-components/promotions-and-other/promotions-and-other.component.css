@@ -1,0 +1,145 @@
+.promotions-cards {
+  display: flex;
+  justify-content: center;
+}
+.promotoions h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.promotions-h1 {
+  font-weight: bold;
+  font-size: 50px;
+  color: #444444;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #539cd8;
+  font-size: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: #444444;
+  width: 300px;
+}
+.secound-one h5 {
+  color: rgb(112, 112, 112);
+}
+.first-one {
+  background-color: #539cd8;
+  color: white;
+}
+.first-one:hover {
+  background-color: #539cd8;
+  color: white;
+}
+
+.secound-one:hover {
+  transform: scale(1.1);
+  background-color: #539cd8;
+  color: white;
+}
+.secound-one:hover h5 {
+  color: white;
+}
+
+button {
+  color: #444444;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.gb-span {
+  font-size: 50px;
+}
+
+.sms-paragraph {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.price-paragraph {
+  font-size: 50px;
+}
+
+.onActiveButton {
+  color: #539cd8;
+  border-bottom: 3px solid #539cd8;
+}
+
+.promotions-text {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.promotions-text2 {
+  margin-top: 50px;
+  font-size: 30px;
+}
+.promotions-text2 h1 {
+  font-weight: bolder;
+}
+.promotions-text2 p {
+  font-weight: lighter;
+}
+
+.promotions-joker-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.promotions-joker-cards.card {
+  width: 200px;
+  box-shadow: 1px 2px 3px rgb(221, 221, 221);
+}
+
+@media (max-width: 768px) {
+  .promotions-joker-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+  }
+  .promotions-joker-cards.card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .promotions-h1 {
+    font-size: 40px;
+  }
+  button {
+    font-size: 20px;
+    color: #444444;
+    margin: 5px;
+  }
+  .onActiveButton {
+    color: white;
+    border: none;
+    background-color: #539cd8;
+  }
+  .promotions-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    grid-gap: 10px;
+  }
+  .promotions-text,
+  .promotions-text2 p {
+    font-size: 25px;
+    padding: 10px;
+    text-align: left;
+  }
+  .promotions-text2 h1 {
+    font-size: 28px;
+  }
+  .promotions-joker-cards {
+    justify-items: center;
+  }
+}

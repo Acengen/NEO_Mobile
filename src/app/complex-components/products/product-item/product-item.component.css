@@ -1,0 +1,34 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #539cd8;
+  float: right;
+  padding: 10px;
+}
+.card {
+  transition: 0.3s ease-in-out;
+  border: none !important;
+  max-width: 300px;
+}
+img {
+  width: 100%;
+  height: 250px;
+}
+.active {
+  box-shadow: 2px 2px 4px rgb(150, 150, 150);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 200px;
+  }
+  img {
+    height: 200px;
+  }
+}
+@media (max-width: 420px) {
+  .card {
+    margin-top: 10px;
+  }
+}

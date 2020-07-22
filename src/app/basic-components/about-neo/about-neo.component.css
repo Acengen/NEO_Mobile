@@ -1,0 +1,99 @@
+.about {
+  margin-top: 50px;
+  padding: 20px;
+}
+.about-text-header {
+  text-align: center;
+}
+
+.about-text-paragraph {
+  margin-top: 50px;
+  text-align: center;
+}
+.about-text-paragraph p {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about-grinfild-paragraph {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about-market-paragraph {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.horizontal-line {
+  background-color: #539cd8;
+  width: 90%;
+  height: 2px;
+}
+
+.about-news-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+}
+.about-news-div-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+}
+.about-grinfild {
+  border-right: 2px solid #539cd8;
+}
+
+.about-market {
+  margin-left: 30px;
+}
+.about-text-header1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-market,
+.about-grinfild {
+  padding: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 420px) {
+  .about-text-header h1 {
+    font-size: 25px;
+  }
+  .about-text-header1 h1 {
+    font-size: 25px;
+  }
+  .about-text-paragraph p {
+    font-size: 20px;
+  }
+  .about-grinfild-paragraph {
+    font-size: 20px;
+  }
+  .about-market-paragraph {
+    font-size: 20px;
+  }
+  .about-grinfild {
+    border: none;
+    padding: 0;
+  }
+  .horizontal-line {
+    width: 0%;
+    height: 0;
+  }
+  .about-news-div,
+  .about-news-div-2 {
+    justify-items: center;
+  }
+  .about-market {
+    margin-left: 0px;
+    padding: 0;
+  }
+}

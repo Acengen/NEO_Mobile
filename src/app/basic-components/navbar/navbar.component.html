@@ -1,0 +1,38 @@
+<div class="navbar-main" [ngClass]="{ closeNavbar: closeNav }">
+  <i
+    (click)="closeNavbar()"
+    class="fas fa-angle-right closeNav"
+    *ngIf="!closeNav"
+  >
+    - close</i
+  >
+
+  <a routerLink="/header" class="header-neo">NEO Mobile</a>
+  <a routerLinkActive="class1" routerLink="/products">Mobile Phones</a>
+  <a routerLinkActive="class1" routerLink="/about-neo">about NEO</a>
+  <a routerLinkActive="class1" routerLink="/covid-info"
+    >COVID-19 Important notice</a
+  >
+  <a routerLinkActive="class1" routerLink="/contact" *ngIf="isAuthenticate"
+    >Contact&Help</a
+  >
+  <a
+    routerLinkActive="class1"
+    routerLink="/your-submission"
+    class="my-neo"
+    *ngIf="isAuthenticate"
+    >{{ email }}</a
+  >
+  <a
+    routerLinkActive="class1"
+    routerLink="/auth-form"
+    class="login"
+    *ngIf="!isAuthenticate"
+    >Login/Signup</a
+  >
+  <a (click)="logout()" *ngIf="isAuthenticate" class="logout">Logout</a>
+</div>
+
+<i (click)="openNavbar()" class="fas fa-angle-left openNav" *ngIf="closeNav">
+  - open
+</i>

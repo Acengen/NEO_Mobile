@@ -1,0 +1,120 @@
+.navbar-main a {
+  float: left;
+  display: block;
+  padding: 14px 16px;
+  color: #444444;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-main {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f3f4;
+  transition: 0.6s ease;
+  box-shadow: 2px 2px 3px #d8d8d8;
+}
+.navbar-main.closeNavbar {
+  width: 0px;
+}
+.navbar-main a:hover {
+  color: #539cd8;
+}
+.openNav {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  background-color: #fcfcfc;
+  font-size: 30px;
+  cursor: pointer;
+}
+.closeNav {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.fas {
+  padding: 5px;
+  color: rgb(21, 109, 180);
+  display: none;
+}
+
+.class1 {
+  border-bottom: 4px solid #539cd8;
+}
+
+.header-neo {
+  font-size: 30px;
+}
+.navbar-main a.my-neo {
+  border: 2px solid #acacac;
+  border-radius: 20px;
+  float: right;
+}
+.navbar-main a.login {
+  float: right;
+}
+.navbar-main a.logout {
+  float: right;
+  cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .navbar-main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    font-size: 11px;
+    z-index: 99;
+    text-align: left;
+    animation: djole 2s forwards ease-in-out;
+  }
+  @keyframes djole {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .header-neo {
+    font-size: 20px;
+  }
+  .navbar-main a.my-neo {
+    float: none;
+    border: none;
+  }
+  .navbar-main a.login {
+    float: none;
+  }
+  .navbar-main a.logout {
+    float: none;
+  }
+
+  .navbar-main a {
+    padding: 10px;
+    color: #444444;
+    font-weight: bold;
+    text-decoration: none;
+    float: none;
+  }
+  .fas {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-neo {
+    font-size: 30px;
+  }
+  .openNav {
+    font-size: 20px;
+  }
+  .closeNav {
+    font-size: 20px;
+  }
+}

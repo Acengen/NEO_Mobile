@@ -1,0 +1,20 @@
+<div class="more-promotions-cards">
+  <div class="card" *ngFor="let package of packages; let i = index">
+    <div class="card-body">
+      <h5 class="card-title">{{ package.name }}</h5>
+      <h6 class="card-subtitle mb-2">
+        <span>{{ package.gb }}</span> GB
+      </h6>
+      <p class="card-text" style="font-weight: bold;">
+        {{ package.smsAndcalls }}
+      </p>
+      <p>{{ package.internetProtect }}</p>
+      <hr />
+      <p>{{ package.bonusGb }}</p>
+      <p class="price-paragraph">{{ package.price }} $</p>
+      <button class="btn" [disabled]="!isMobdata" (click)="addPackage(i)">
+        <a class="card-link"></a>ADD PACKAGE
+      </button>
+    </div>
+  </div>
+</div>

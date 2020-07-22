@@ -1,0 +1,60 @@
+.more-promotions-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+.more-promotions-cards h1 {
+  margin: 20px;
+}
+
+button {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  background-color: #539cd8;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+button[disabled] {
+  cursor: not-allowed;
+}
+a:hover,
+a {
+  text-decoration: none;
+}
+.card {
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: #444444;
+  width: 100%;
+}
+.card h5 {
+  font-weight: bold;
+  font-size: 50px;
+}
+.card span {
+  font-size: 50px;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.price-paragraph {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .more-promotions-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}

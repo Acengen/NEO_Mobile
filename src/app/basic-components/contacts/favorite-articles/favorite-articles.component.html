@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: center;">
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+</div>
+<div class="favorite-articles" *ngIf="!isLoading">
+  <ul class="list-group">
+    <li class="list-group-item" *ngIf="favoriteAr">
+      <i class="fa fa-caret-right"></i> {{ favoriteAr.name }} <br />
+    </li>
+  </ul>
+</div>
+<div><i class="fa fa-arrow-circle-up"></i> Add your question</div>
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <label>Full Name:</label>
+  <input
+    class="form-control"
+    type="text"
+    name="name"
+    ngModel
+    #name="ngModel"
+    required
+  />
+  <p *ngIf="!name.valid && name.touched">
+    Please enter your full name <i>(exp Jhon Doe)</i>
+  </p>
+  <button class="btn" type="submit" [disabled]="!form.valid">submit</button>
+</form>
+<h4 class="text-center">{{ errorMsg }}</h4>

@@ -1,0 +1,17 @@
+.header-main {
+    background-color: #539cd8;
+    min-height: 500px;
+    padding: 20px;
+}
+.header-text {
+    max-width: 300px;
+    color: #f2f3f4;
+}
+
+.store-button {
+    text-decoration: none;
+    color: #f2f3f4;
+    background-color: #a04838;
+    padding: 5px 15px;
+    font-weight: bold;
+}

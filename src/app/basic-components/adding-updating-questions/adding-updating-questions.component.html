@@ -1,0 +1,16 @@
+<form class="my-3" [formGroup]="updatingForm" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    class="form-control"
+    formControlName="name"
+    placeholder="add/update question"
+  />
+  <button
+    class="btn"
+    type="submit"
+    [disabled]="!updatingForm.valid"
+    style="background-color: #444444; color: white;"
+  >
+    {{ editMode ? "Update" : "Add" }}
+  </button>
+</form>

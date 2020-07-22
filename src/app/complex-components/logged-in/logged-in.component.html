@@ -1,0 +1,84 @@
+<!-- Message when delete request is sent -->
+<div class="package-cancel-msg" *ngIf="packageCancel">
+  <span>Successfully cancelled</span>
+</div>
+<div class="container my-3">
+  <div style="background-color: #539cd8; color: white; padding: 20px;">
+    <p style="font-weight: bold;">
+      Your submitted questions: <span *ngIf="customerData.length <= 0">/</span>
+    </p>
+
+    <!-- Loading spinner -->
+    <div style="display: flex; justify-content: center;" *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+
+    <!-- displaying customer questions added  -->
+    <div class="my-3" *ngFor="let customer of customerData">
+      -{{ customer.name }}
+    </div>
+    <a routerLink="/contact" class="add-more-quest">{{
+      customerData.length > 0 ? "Add more" : "Add"
+    }}</a>
+  </div>
+  <h1 *ngIf="errorMsg">{{ errorMsg }}</h1>
+  <div style="background-color: #539cd8; color: white; padding: 20px;">
+    <!-- displaying customer mobile he choose to buy and loading spinner -->
+    <p style="font-weight: bold;">
+      Your bought product: <span *ngIf="!customerMobileData">/</span>
+    </p>
+    <div style="display: flex; justify-content: center;" *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <div class="row my-3" *ngIf="customerMobileData">
+      <div class="col-sm-6">
+        <div class="card">
+          <i
+            class="fas fa-phone-slash"
+            title="cancel mobile order"
+            (click)="deleteMobile()"
+          ></i>
+          <div class="card-body">
+            <h5 class="card-title">{{ customerMobileData.name }}</h5>
+            <p class="card-text">
+              {{ customerMobileData.display }}
+            </p>
+            <p class="card-text">
+              {{ customerMobileData.memorie }} internal memorie
+            </p>
+            <p class="card-text">{{ customerMobileData.platform }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- displaying neo packages that customer choose and loading spinner -->
+    <p style="font-weight: bold;">
+      Your bought package:
+      <span *ngIf="!customerPackages">/ </span>
+    </p>
+    <div style="display: flex; justify-content: center;" *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <div class="row" *ngIf="customerPackages">
+      <div class="col-sm-6">
+        <div class="card">
+          <i
+            class="fas fa-phone-slash"
+            title="cancel package order"
+            (click)="deletePackage()"
+          ></i>
+          <div class="card-body">
+            <h5 class="card-title">{{ customerPackages.name }}</h5>
+            <p class="card-text">
+              {{ customerPackages.gb }}
+            </p>
+            <p class="card-text">{{ customerPackages.bonusGb }}</p>
+            <p class="card-text">{{ customerPackages.smsAndcalls }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />

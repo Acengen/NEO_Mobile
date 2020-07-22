@@ -1,0 +1,73 @@
+.contacts {
+  padding: 10px;
+}
+.contacts p {
+  color: #444444;
+}
+ul li.active {
+  background-color: #539cd8 !important;
+  color: #ffffff;
+  font-weight: bold;
+  border: none !important;
+}
+ul li {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+ul li:hover {
+  background-color: rgb(223, 223, 223);
+}
+.contact-support {
+  display: flex;
+  justify-content: center;
+}
+.contact-support .card {
+  color: #444444;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  border-radius: 10px;
+}
+.card h1 {
+  font-weight: bolder;
+  font-size: 15px;
+}
+.card p {
+  font-size: 12px;
+}
+.contact-support .card:hover h1,
+.contact-support .card:hover p {
+  color: #ffffff;
+}
+
+.fa-envelope-o,
+.fa-bookmark,
+.fa-clone {
+  position: absolute;
+  color: #444444;
+  right: 0;
+  bottom: -10%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.activeClass {
+  background-color: #539cd8;
+  color: #ffffff;
+}
+
+.curcle {
+  background-color: #539cd8;
+  color: #ffffff;
+  float: right;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+@media (max-width: 420px) {
+  .contact-support {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}

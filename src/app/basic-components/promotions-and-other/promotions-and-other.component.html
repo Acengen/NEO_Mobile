@@ -1,0 +1,123 @@
+<div class="promotoions text-center">
+  <h1 class="promotions-h1">
+    Start something with NEO
+  </h1>
+  <div class="promotions-buttons" style="margin-bottom: 20px;">
+    <button
+      (click)="withoutDevice()"
+      class="btn"
+      [ngClass]="{ onActiveButton: !clicked }"
+    >
+      Without device
+    </button>
+    <button
+      (click)="withDevice()"
+      class="btn"
+      [ngClass]="{ onActiveButton: clicked }"
+    >
+      With device
+    </button>
+  </div>
+  <div class="promotions-cards" *ngIf="!clicked">
+    <div class="card first-one">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold; font-size: 50px;">
+          NEO 2
+        </h5>
+        <h6 class="card-subtitle mb-2"><span class="gb-span">2</span> GB</h6>
+        <p class="card-text sms-paragraph">
+          Infinitive SMS
+        </p>
+        <hr />
+        <p>+1 GB with online shopping</p>
+        <p class="price-paragraph">9.99 $</p>
+        <a href="#" class="card-link">BUY ONLINE</a>
+      </div>
+    </div>
+    <div class="card secound-one">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: bold; font-size: 50px;">
+          NEO 3
+        </h5>
+        <h6 class="card-subtitle mb-2"><span class="gb-span">3</span> GB</h6>
+        <p class="card-text" style="font-weight: bold;">
+          Infinitive SMS and Calls
+        </p>
+        <p class="card-text">
+          with protection against Internet overruns
+        </p>
+        <hr />
+        <p>+1 GB with online shopping</p>
+        <p class="price-paragraph">10.99 $</p>
+        <a href="#" class="card-link">BUY ONLINE</a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="clicked" class="more-promotions-cars">
+    <app-more-promotions [isAuth]="isAuth"></app-more-promotions>
+  </div>
+  <div class="promotions-text">
+    <p>
+      When you spend gigabytes from the
+      <span style="font-weight: bold;">NEO</span>2 tariff, the price of internet
+      in national traffic is 1 dinar for 1 MB.For even more gigabytes, enjoy the
+      <span style="font-weight: bold;">NEO</span>3 tariff, and after consuming
+      the content from the tariff, Internet access will be disabled, thus
+      protecting you from exceeding the Internet.
+    </p>
+    <p>Keep surfing by buying one of the extras.</p>
+  </div>
+  <div class="promotions-text2">
+    <h1 style="margin-bottom: 10px;">Boost your NEO tariff</h1>
+    <p>
+      Start the shopping process, activate your favorite Joker tariff add-on and
+      enjoy even more online content.
+    </p>
+    <p>
+      Make a package to your liking, with the possibility of later changing the
+      add-on according to your needs.
+    </p>
+  </div>
+  <div class="promotions-joker-cards">
+    <div class="card">
+      <div class="card-body" style="background-color: #539cd8; color: white;">
+        <p style="font-weight: bold;">Joker</p>
+        <h2>500 MB</h2>
+      </div>
+      <div class="card-body">
+        <h2 style="font-weight: bold;">1$</h2>
+        <p style="font-weight: bold;">every month</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" style="background-color: #539cd8; color: white;">
+        <p style="font-weight: bold;">Joker</p>
+        <h2>2 GB</h2>
+      </div>
+      <div class="card-body">
+        <h2 style="font-weight: bold;">2.5$</h2>
+        <p style="font-weight: bold;">every month</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" style="background-color: #539cd8; color: white;">
+        <p style="font-weight: bold;">Joker</p>
+        <h2>4 GB</h2>
+      </div>
+      <div class="card-body">
+        <h2 style="font-weight: bold;">4$</h2>
+        <p style="font-weight: bold;">every month</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" style="background-color: #539cd8; color: white;">
+        <p style="font-weight: bold;">Joker</p>
+        <h2>12 GB</h2>
+      </div>
+      <div class="card-body">
+        <h2 style="font-weight: bold;">7$</h2>
+        <p style="font-weight: bold;">every month</p>
+      </div>
+    </div>
+  </div>
+</div>

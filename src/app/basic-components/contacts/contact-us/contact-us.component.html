@@ -1,0 +1,73 @@
+<div style="display: flex; justify-content: center;">
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+</div>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+  <p class="text-center" style="margin-bottom: 0px;">Contact Form</p>
+  <div class="form-group">
+    <label for="name">Your name*</label>
+    <input class="form-control" type="text" formControlName="name" />
+    <p
+      *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched"
+    >
+      *Your name <span style="color: crimson;"> (required)</span>
+    </p>
+  </div>
+  <div class="form-group">
+    <label>Your phone number*</label>
+    <input class="form-control" type="number" formControlName="number" />
+    <p
+      *ngIf="
+        !contactForm.get('number').valid && contactForm.get('number').touched
+      "
+    >
+      *Your phone number <span style="color: crimson;"> (required)</span>
+    </p>
+  </div>
+  <div class="form-group" *ngFor="let cont of contact">
+    <label>
+      <input type="radio" formControlName="c" [value]="cont" />
+      {{ cont }}
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Your Email*</label>
+    <input type="email" class="form-control" formControlName="email" />
+    <p
+      *ngIf="
+        !contactForm.get('email').valid && contactForm.get('email').touched
+      "
+    >
+      *Your email<span style="color: crimson;"> (required)</span>
+    </p>
+  </div>
+  <div class="form-group">
+    <label>-Choose what are you interested in-</label>
+    <select class="form-control" formControlName="select">
+      <option value="Pripeid">Pripeid</option>
+      <option value="Postpaid">Postpaid</option>
+      <option value="Internet">Internet</option>
+      <option value="Roaming">Roaming</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Text message*</label>
+    <textarea
+      formControlName="textarea"
+      class="form-control"
+      cols="5"
+      rows="6"
+    ></textarea>
+    <p
+      *ngIf="
+        !contactForm.get('textarea').valid &&
+        contactForm.get('textarea').touched
+      "
+    >
+      *Let us know what kind of help you need
+      <span style="color: crimson;"> (required)</span>
+    </p>
+  </div>
+  <button type="submit" class="btn" [disabled]="!contactForm.valid">
+    Send
+  </button>
+</form>

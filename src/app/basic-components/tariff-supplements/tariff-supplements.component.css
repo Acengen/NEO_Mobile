@@ -1,0 +1,51 @@
+.tariff {
+  background-image: url("../../images/Vip-mobile-roming-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+.tariff-text-buttons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.tariff-text-buttons p {
+  font-weight: lighter;
+}
+button {
+  background-color: white;
+  border: 5px solid white;
+  color: #539cd8;
+  padding: 10px;
+  font-weight: bold;
+  margin: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tariff {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tariff {
+    min-height: 900px;
+  }
+  button {
+    text-transform: lowercase;
+  }
+}

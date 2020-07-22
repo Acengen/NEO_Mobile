@@ -1,0 +1,21 @@
+ul li.active {
+  background-color: #539cd8 !important;
+  color: #ffffff;
+  font-weight: bold;
+  border: none !important;
+  border-radius: 0px !important;
+}
+form {
+  padding-top: 30px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form button {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid crimson;
+}
